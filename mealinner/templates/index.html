@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% load static %} {% block title %} Home
+page {% endblock %} {% block maincontent %}
+<section class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <div class="title">
+        <h1>
+          Best fast food items in town. Grab ours and devour fast...
+        </h1>
+        <button class="btn btn-outline-secondary mt-3">
+          <a class="nav-link" href="/meals">See our meals</a>
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <img class="img-fluid" src="{% static "/images/banner.jpg" %}"
+        alt="">
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

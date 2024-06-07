@@ -1,0 +1,34 @@
+{% extends "base.html" %} 
+
+{% block title %} 
+Meals detail page 
+{% endblock %} 
+
+{% block maincontent %}
+<section class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="card text-bg-secondary mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="{{meal.strMealThumb}}"
+              class="img-fluid rounded-start"
+              alt="..."
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <p class="card-text">Id: {{meal.idMeal}}</p>
+              <h5 class="card-title fs-2">{{meal.strMeal}}</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam error officiis quidem natus. Nulla perspiciatis autem quidem, nam ex consectetur a quod voluptates laudantium commodi quisquam eaque sit laboriosam, obcaecati vero eius illum, quae reiciendis officiis? Similique in sapiente omnis saepe maiores odio nostrum earum sunt eveniet quasi. Sint maxime voluptates commodi obcaecati, atque dicta et veniam itaque ratione minima natus minus repellendus perferendis ad aperiam, quam exercitationem eveniet doloremque perspiciatis. Quidem animi atque quaerat? Architecto quasi fuga tempore obcaecati itaque a doloribus in iste animi deleniti corrupti eaque quas tempora qui pariatur, rerum est ratione laborum hic ea numquam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

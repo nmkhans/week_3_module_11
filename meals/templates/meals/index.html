@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% block title %} Meals page {% endblock %}
+{% block maincontent %}
+<section class="container py-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center fw-semibold mb-5">All Meals</h1>
+    </div>
+  </div>
+  <div class="row gy-4">
+    {% for meal in meals %}
+    <div class="col-lg-4">
+      <div class="card text-bg-secondary">
+        <img
+          src="{{ meal.strMealThumb }}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{meal.strMeal}}</h5>
+          <p class="card-text">
+            Some food item best for eating on the planet and make up
+            the bulk of the peoples's taste.
+          </p>
+          <a
+            href="{% url 'meal-detail' id=meal.idMeal %}"
+            class="btn btn-primary"
+            >See Detail</a
+          >
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
